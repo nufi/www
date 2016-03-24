@@ -1,4 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+* {
+  box-sizing: border-box;
+}
+
 body {
 	background: black;
-	color: white;
+	color: red;
+}
+
+div
+{
+  max-width: 750px;
+  display: inline-block;
+  border-color: red;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border: solid 3px;
+  border-radius: 50px;
+  line-height: initial;
+}
+
+#auteur
+{
+	font-family: 'Pacifico', cursive;
+	font-size: 1.9em;
+	color: cyan;
+	text-align: center
+}
+
+#id1
+{
+	font-family: 'Pacifico', cursive;
+	font-size: 1.9em;
+	color: magenta;
+	text-align: center	
+}
+
+li
+{
+	font-family: arial;
+	font-size: 1.5em;
+	color: yellow;
+
+}
+
+p
+{
+	color: yellow;
+	font-family: arial;
+	font-size: 20px;
+}
+
+p::first-letter
+{
+	padding-left: 30px;
+}
+
+a
+{
+	color: #00ffff;
+}
+
+/* unvisited link */
+a:link {
+    color: #00ffff;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+}
+
+/* selected link */
+a:active {
+    color: blue;
 }
