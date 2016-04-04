@@ -1,4 +1,83 @@
+*
+{
+    box-sizing: border-box;
+}
+
 body {
 	background: black;
-	color: white;
+	color: white;}
+
+
+
+h1
+{
+    font-family: arial, sans-serif;
+    font-size: 1.9em;
+    color: yellow;
 }
+
+#txt_pen
+{
+    font-family: arial, sans-serif;
+    font-size:normal;
+    color: yellow;
+}
+
+#flex
+{
+    display: flex;
+    background-color: hsl(45,100%,70%); 
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 400px;
+}
+
+#flex > * { /*Tout le contenu du flexbox*/
+    flex:1;/*permet d'occuper tout l'espace dispo*/  margin:10px;  
+}
+
+#txt_pen a:link
+{  
+    color: #00ffff;
+}
+
+#box
+{ 
+  background: radial-gradient(farthest-corner at 50% 50%, white, black);
+  display: inline-block; 
+  position: fixed;
+  top: 0;
+  right:0;  
+  box-shadow:0 0 15px #f0f0f0 inset;
+  border-radius: 0 0 0 30px;
+  padding: 20px;
+  font-family: arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  opacity: 0.8;
+  z-index: 1;
+  
+}
+
+/* unvisited link */
+a:link {
+    color: #00ffff;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;   
+	/*text-shadow:5em 0em  0.05em yellow;*/
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+
