@@ -1,4 +1,84 @@
-body {
+body
+{
 	background: black;
 	color: white;
+    margin:20px;
 }
+
+#accueil
+{ 
+  background: radial-gradient(farthest-corner at 50% 50%, white, black);
+  display: inline-block; 
+  position: fixed;
+  top: 0;
+  right:0;  
+  box-shadow:0 0 15px #f0f0f0 inset;
+  border-radius: 0 0 0 30px;
+  padding: 20px;
+  font-family: arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold; 
+  opacity: 100%;
+  z-index: 1;
+  
+}
+
+h1
+{
+    font-family: arial, sans-serif;
+    font-size: 1.9em;
+    color: yellow;
+}
+
+#cont_iframe
+{
+  
+  height: 800px;
+  background-color: black;  
+  padding: 10px;
+ 
+    
+}
+
+iframe
+{
+  
+  
+  height: inherit;
+  background-color: black;  
+  padding: 10px;
+  border: solid 3px;
+  border-radius: 50px;
+  border-color: red;
+  line-height: initial;
+  animation-name: mon_animation;
+  animation-iteration-count: infinite;
+  animation-duration: 4s;
+}
+
+@keyframes mon_animation {
+    0%   {border-color:red;}
+    25%  {border-color:yellow;}
+    50%  {border-color:blue;}
+    75%  {border-color:green; }
+    100% {border-color:red;}
+}
+
+a:link {
+    color: #00ffff;
+}
+
+a:visited
+{
+    color: green;
+}
+
+a:hover
+{
+    color: hotpink;
+}
+
+a:active {
+    color: blue;
+}
+

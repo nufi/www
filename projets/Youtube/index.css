@@ -58,8 +58,11 @@ span
     
 }
 
+
 #kmer, #mboma
 {   
+    flex: 1;
+    margin: 0 10px 0 10px;
     max-width: 100%;
     background: inherit;
     align-content: center;
@@ -74,6 +77,16 @@ span
     animation-name: mon_animation;
     animation-iteration-count: infinite;
     animation-duration: 4s;
+}
+
+@media (min-width:800px)
+{
+    .conteneur_video
+    {
+        display: flex;
+        margin: 0 10px 0 10px;
+    }
+    
 }
 
 
@@ -102,17 +115,6 @@ span
   z-index: 1;
   
 }
-
-@media (width: 500px)
-{
-  body 
-  {
-     display:flex;
-     flex-wrap: wrap;
-  }
-}
-
-
 
 
 /* unvisited link */

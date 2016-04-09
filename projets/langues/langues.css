@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 
-body {
+body
+{
 	background-color: black;
 	counter-reset: cle;
 }
@@ -9,8 +10,7 @@ body {
 {
     display: inline-block;
     font-family:arial, sans-serif;
-    color: hsl(45,100%,50%);
-    width: 40%;
+    color: hsl(45,100%,50%);  
     padding: 10px;
     margin-left: 50px;
     background-color: black; 
@@ -25,10 +25,9 @@ body {
 
 #lorem
 {
-    display: inline-block;
+    display: block;
     font-family:arial, sans-serif;
-    color: hsl(45,100%,50%);
-    width:40%;
+    color: hsl(45,100%,50%);    
     padding: 10px;
     margin-left: 50px;
     top: 10px;
@@ -76,16 +75,16 @@ article::before
     counter-increment: cle;
     content:counter(cle);
     font-size: 250%;
-    //color: hsl(45,100%,45%);
     color: yellow;
     font-family: arial;
 }
 
 article
 {
-    background-color: aquamarine;
+
     min-width: 300px;
     max-width: 300px;
+    min-height: 350px;
     text-align: center;
     border: solid;
     border-radius: 20px;
@@ -107,23 +106,14 @@ ol:lang(fr)
 
 article:nth-child(odd)
 {
-    background-color: hsl(0,100%,20%);
+   
     padding: 2px;
-    box-shadow:  0 0 0 2px #FF0000 inset; 
-   
-    
-}
-
-article:nth-child(1)
-{
-   
-    
+    box-shadow:  0 0 0 2px #FF0000 inset;    
     
 }
 
 article:nth-child(even)
-{
-    background-color:#003d00;
+{  
     padding: 2px;
     box-shadow:  0 0 0 2px #008000 inset;
 }
@@ -159,6 +149,7 @@ a:active {
 article:nth-child(1)
 {
     order:0;
+    padding: 10px;
    background: linear-gradient(to bottom,
    rgba(255,0,0,0), rgba(255,0,0,1)); /*Standard*/
     
@@ -166,54 +157,60 @@ article:nth-child(1)
 
 article:nth-child(2)
 {
-    order:1;
-    box-shadow: inset;
+    order:1;   
+    padding: 5px;
     background: linear-gradient(to bottom,
     rgba(0,255,0,0), rgba(0,255,0,1));
 }
 article:nth-child(3)
 {
     order:3;
+    padding: 10px;
     background: linear-gradient(to bottom,
     rgba(255,0,0,0), rgba(255,0,0,1)); 
 }
 article:nth-child(4)
-{
-    order:4;
-    background-color:hsl(290,100%,10%);
+{     
+    order:4;   
+    background-color:hsl(120,100%,35%);
 }
 article:nth-child(5)
 {
-    background-color:saddlebrown;
-     box-shadow:  0 0 0 2px brown inset;
+    background-color:black;
     order:2;
+    padding: 10px;
+    box-shadow:  0 0 0 2px #001118 inset;
 }
 
 article:nth-child(5) li
-{
-   
+{   
     color: blue;
     width: 40px;
+    padding-left: 10px;
 }
 
 article:nth-child(6)
 {
     order:5;
-     background: linear-gradient(to bottom,
+    padding: 10px;
+    background: linear-gradient(to bottom,
     rgba(0,255,0,0), rgba(0,255,0,1));
     
 }
 article:nth-child(7)
 {
     order:6;
+    padding: 10px;
     background: linear-gradient(to bottom,
     rgba(255,0,0,0), rgba(255,0,0,1));
 }
 article:nth-child(8)
-{
+{ 
+    background-color:black;
     order:7;
-     background: linear-gradient(to bottom,
-    rgba(0,255,0,0), rgba(0,255,0,1));
+    padding: 10px;
+    box-shadow:  0 0 0 2px #001118 inset;
+    
 }
 
 /*cadres 1, 3, 7*/
@@ -221,21 +218,35 @@ article:nth-child(1) ol>li:nth-child(odd),
 article:nth-child(3) ol>li:nth-child(odd),
 article:nth-child(7) ol>li:nth-child(odd)
 {
-    width: 40px;
-    background-color: #8B1A1A;
-    text-align: center;
-    font-style: italic;   
+    width: 45px;
+    background-color: hsl(360,100%,15%);
+    text-align:left;
+    font-style: italic;    
+    padding-left: 10px;
     
+}
+
+article:nth-child(1) ol>li:first-letter,
+article:nth-child(2) ol>li:first-letter,
+article:nth-child(3) ol>li:first-letter,
+article:nth-child(4) ol>li:first-letter,
+article:nth-child(5) ol>li:first-letter,
+article:nth-child(6) ol>li:first-letter,
+article:nth-child(7) ol>li:first-letter,
+article:nth-child(8) ol>li:first-letter
+{
+    text-transform: uppercase;
 }
 
 article:nth-child(1) ol>li:nth-child(even),
 article:nth-child(3) ol>li:nth-child(even),
 article:nth-child(7) ol>li:nth-child(even)
 {
-    width: 40px;
-    background-color: #FF6A6A;
-    text-align: center;
+    width: 45px;
+    background-color: hsl(360,100%,60%);
+    text-align: left;
     font-style: italic;
+    padding-left: 10px;
     
 }
 article:nth-child(1) ol>li:nth-child(1),
@@ -260,19 +271,21 @@ article:nth-child(2) ol>li:nth-child(even),
 article:nth-child(4) ol>li:nth-child(even)
 
 {
-    width: 40px;
-    background-color: #458B00;
-    text-align: center;
+    width: 45px;
+    background-color: hsl(120,100%,20%);
+    text-align: left;
     font-style: italic;
+    padding-left: 10px;
     
 }
 article:nth-child(2) ol>li:nth-child(odd),
 article:nth-child(4) ol>li:nth-child(odd)
 {
-    width: 40px;
-    background-color: #00FA9A;
-    text-align: center;
+    width: 45px;
+    background-color: hsl(120,100%,60%);
+    text-align: left;
     font-style: italic;
+    padding-left: 10px;
     
 }
 article:nth-child(2) ol li:nth-child(1),
@@ -295,37 +308,28 @@ article:nth-child(6) ol li
    text-align-last: justify;
    margin-right: 20%; 
    font-style: italic;
-
+   padding-left: 10px;
 }
 
 article:nth-child(6) ol span
 {
-    color: rgb(240,195,0);
-    font-style: italic;
-}
-
-article:nth-child(8) ol
-{
-  display: block;
-  position: relative;
-  align-content: center;
-  width: 125px;
-    
-    
+    color: rgb(240,195,0);    
+    color:gold;
 }
 
 article:nth-child(8) span:nth-child(1)
 {
-   // display: inline-flex;
+  
     display: inline-block;
     min-width: 80px;
     color: gold;    
 }
 
-article:nth-child(8) span:nth-child(2)
+article:nth-child(8) span
 {
     color: white;
-    //padding-left: 10px;
+    padding-left: 15px;
+   
     
 }
 
@@ -333,7 +337,7 @@ article:nth-child(8) span:nth-child(3)
 {
     color: blue;
     float:right;
-    //min-width: 15px;
+   
 }
 
 article:nth-child(8) li

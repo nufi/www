@@ -1,6 +1,8 @@
-body {
+body
+{
 	background: black;
 	color: white;
+    margin:20px;
 }
 
 div
@@ -16,7 +18,7 @@ div
   font-family: arial, sans-serif;
   font-size: 1.3em;
   font-weight: bold; 
-  opacity: 0.8;
+  opacity: 100%;
   z-index: 1;
   
 }
@@ -30,8 +32,15 @@ h1
 
 iframe
 {
-  background-color: black;
-  display: block;  
+   max-height: 75%;
+    
+}
+
+#cont_iframe
+{
+  
+  width: 75%;
+  background-color: black;  
   padding: 10px;
   border: solid 3px;
   border-radius: 50px;
@@ -41,6 +50,7 @@ iframe
   animation-iteration-count: infinite;
   animation-duration: 4s;
 }
+
 @keyframes mon_animation {
     0%   {border-color:red;}
     25%  {border-color:yellow;}

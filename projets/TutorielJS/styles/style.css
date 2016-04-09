@@ -1,0 +1,125 @@
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 16px;  
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+
+html {
+  background-color: #00539F;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;  
+  color: #00539F;
+  text-shadow: 3px 3px 1px black;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+#box
+{ 
+  background: radial-gradient(farthest-corner at 50% 50%, white, black);  
+  display: block; 
+  position: fixed;
+  top: 0;
+  right:0;  
+  box-shadow:0 0 15px #f0f0f0 inset;
+  border-radius: 0 0 0 30px;
+  padding: 20px;
+  font-family: arial, sans-serif;  
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.8;
+  z-index: 1;  
+}
+
+#box:hover
+{
+    opacity: 1;
+    transition: opacity 4s;  
+   -moz-transition: opacity 4s;
+    
+}
+
+#box a
+{
+    font-family: arial, sans-serif;
+    font-size: 1.9em;    
+}
+
+button
+{
+    background-color:hsl(221,96%,97%);
+    display: block;    
+    border-radius: 10px;
+    position: relative;
+    margin:5px 20px 0px 20px;
+    font-size: 200%;
+    font-weight: bold;
+    opacity: 1;
+    
+}
+
+button:hover
+{
+    background-color:burlywood; /* Green */
+    color: auto;
+    border-color: orange;
+    opacity: 1;   
+    -moz-transition-duration: 3s; /* Safari */
+    transition-duration:opacity 4s;
+}
+
+@media (min-width: 75%)
+{
+    body {
+        display: flex;
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+/* unvisited link */
+a:link {
+    color: #00ffff;
+}
+
+/* visited link */
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+    
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
