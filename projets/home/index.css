@@ -1,7 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
 
-
-
 body {
     max-width: 650px;
 	background: black;
@@ -14,20 +12,21 @@ body {
     margin: auto;
 }
 
-div
+#container
 {
-  margin:auto;
-  width: 100%;
+  margin:10px;
+  max-width: 650px;
   display: inline-block;
   border-color: red;
   background: rgba(0, 0, 0, 0.3);
-  padding: 20px;
+  padding: 10px;  
   border: solid 3px;
   border-radius: 50px;
   line-height: initial;
   animation-name: mon_animation;
   animation-iteration-count: infinite;
   animation-duration: 4s;
+    position: relative;
 }
 
 #degrade
@@ -157,5 +156,38 @@ img
     margin: auto;
 }
 
+
+label
+{
+    color: yellow;
+}
+
+#lblcheckbox
+{
+    position: absolute;
+    margin: 0;
+    top: 0;
+    right: 0;    
+    border-bottom-left-radius:2em;
+    padding: 8px 20px;
+    z-index: 1;
+    border-bottom: solid;
+    border-left: solid;
+    animation-name: mon_animation;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;    
+}
+
+#lblcheckbox:hover
+{
+    cursor: pointer;
+}
+
+#checkbox
+{
+    margin-right: 5px;
+    position:relative;
+    top: 2px;
+}
 
 

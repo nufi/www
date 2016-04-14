@@ -5,28 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8" />
     <title>nufi</title>
+    <link rel="stylesheet" href="../../common/css/normalize.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     
-    <div>        
+    <div id="container">        
+        <label id="lblcheckbox"><input type="checkbox" id="checkbox">Sourdine</label>
+      
         <div id="degrade"> <h1>Flaubert W. Moumi</h1> </div>      
         <p id="m_view"><img src="photo.jpg" alt="Acropole des draveurs"></p>
         <h2 id="id1"><span>Bienvenue sur mon site web!</span></h2>
-        <p id="audio"><audio src="Voix.3gp" type="audio/mp4" autoplay>
-        </audio></p>
+        <audio id="audio" src="Voix.3gp"  autoplay>
+        </audio>
         <p>Je vous invite à le visiter. Les rubriques disponibles, en ordre alphabétique sont les suivantes:</p>
         
-        <ul>
+       <!-- <ul>
         	<li><a href="../langues/index.html">Langues</a></li>
         	<li><a href="../pens/index.html">Pens</a></li>  
             <li><a href="../youtube/index.html">YouTube</a></li> 
-             <li><a href="../tutorielJS/index.html">TutorielJS</a></li>
-        </ul>
+            <li><a href="../tutorielJS/index.html">TutorielJS</a></li>
+        </ul>-->
+        
+        <ul id="ulMenu"></ul>
 
     </div>
-    
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
