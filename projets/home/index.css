@@ -162,17 +162,24 @@ label
     color: yellow;
 }
 
+label:hover
+{
+    color: aqua;
+}
+
 #lblcheckbox
 {
     position: absolute;
     margin: 0;
     top: 0;
     right: 0;    
-    border-bottom-left-radius:2em;
+    border-bottom-left-radius:5em;
+    border-top-right-radius: 10em;
     padding: 8px 20px;
     z-index: 1;
     border-bottom: solid;
     border-left: solid;
+    border-right:solid;
     animation-name: mon_animation;
     animation-iteration-count: infinite;
     animation-duration: 4s;    
@@ -181,6 +188,7 @@ label
 #lblcheckbox:hover
 {
     cursor: pointer;
+    background-color:darksalmon;    
 }
 
 #checkbox

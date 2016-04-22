@@ -3,15 +3,17 @@
     
     "use strict";
 
-    var monImage = document.querySelector("img");
+   
     var monBouton = document.querySelector('button');
     var monTitre = document.querySelector('h1');
-
+    var monImage = document.querySelector('img');      
     
+     
     monBouton.onclick = function() { definirNomUtilisateur();}
-    // monBouton.onclick = definirNomUtilisateur;
+    // ou monBouton.onclick = definirNomUtilisateur;
 
     initialiser();
+    
     
     function initialiser() 
     {
@@ -44,7 +46,22 @@
             monTitre.textContent = 'Mozilla est cool, ' + monNom;
             return true;
         }
-    }  
+    }
+       
+             
+    monImage.onclick = function ()
+    {
+            var maSrc = monImage.getAttribute('src');
+            
+            if (maSrc === 'images/firefox.png')
+            {
+                monImage.setAttribute('src', 'images/TheWorld.png');                
+            }
+            else
+            {
+                monImage.setAttribute('src', 'images/firefox.png');
+            }        
+    }
 
 })();
 

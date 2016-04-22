@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+body
+{
+	background: black;
+	color: white;
+    margin:20px;
+}
+
+#accueil
+{ 
+  background: radial-gradient(farthest-corner at 50% 50%, white, black);
+  display: inline-block; 
+  position: fixed;
+  top: 0;
+  right:0;  
+  box-shadow:0 0 15px #f0f0f0 inset;
+  border-radius: 0 0 0 30px;
+  padding: 20px;
+  font-family: arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold; 
+  opacity: 100%;
+  z-index: 1;
+  
+}
+
+#conteneur
+{   
+  display: block;
+  margin: 10px;
+  padding: 15px;
+  border: solid 3px;
+  border-radius: 50px; 
+  color: red;
+}
+
+header
+{ 
+  display:flex;
+  width: 95%;
+  margin:5px;  
+  background: rgba(0,0,0,0.3);
+  padding: 15px;  
+  border: none;
+  border-radius: 50px; 
+  position: relative;
+  
+}
+
+header span
+{
+    font-family: arial, sans-serif;
+    font-style: 1.9em;
+    font-weight:bold;
+    padding: 5px;    
+}
+
+header input
+{
+    flex:1;
+    background: red;
+    border: 0px;
+    border-radius: 10px;    
+    box-shadow:0px 0px 5px 5px red;
+    font-size:14px; 
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.text
+{
+    font-family: arial, sans-serif;
+    font-size: 0.9em;
+    color: white;
+    
+}
+
+
+
+article
+{
+    padding: 5px 10px;
+}
+
+article img
+{    
+ float: right;   
+}
+
+article div
+{
+    display:inline-block;
+}
+
+article div:focus
+{
+    background-color: azure;    
+    border-radius: 3px;
+    color: black;
+    font-size: 0.9em;
+}
+
+article input:hover
+{
+     box-shadow: 0 0 50px 10px white;
+}
+article input:focus
+{
+    box-shadow: 0 0 50px 10px white;
+}
+
+
+article img:hover
+{
+     box-shadow: 0 0 50px 10px white;
+}
+
+article img:focus
+{
+    box-shadow: 0 0 50px 10px white;
+}
+
+
+article input
+{
+    margin-right: 10px;
+}
+
+::-webkit-input-placeholder
+{ /* Chrome/Opera/Safari */
+  color:rgba(0,0,0,0.5);
+  font-size: 1.3em;
+  font-weight:bold;
+  
+  
+}
+::-moz-placeholder
+{ /* Firefox 19+ */
+  color: rgba(0,0,0,0.5);
+  font-size: 1.3em;
+  font-weight:600;
+  
+}
+:-ms-input-placeholder 
+{ /* IE 10+ */
+  color: cyan;
+}
+:-moz-placeholder 
+{ /* Firefox 18- */
+  color: cyan;
+}
+
+h1
+{
+   font-family: 'pacifico', cursive;
+    color: red;
+    margin-left: 15px;
+}
+
+@media(max-width:361px)
+{
+    .hide-on-small-screen
+    {
+      display: none;
+    }
+}
+
+
+a:link 
+{
+    color: #00ffff;
+}
+
+a:visited
+{
+    color: green;
+}
+
+a:hover
+{
+    color: hotpink;
+}
+
+a:active {
+    color: blue;
+}

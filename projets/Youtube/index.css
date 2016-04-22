@@ -54,9 +54,16 @@ span
     margin-left: 3px;
     background: red;
     color: white;
-    border-radius: 10px;
-    
+    border-radius: 10px;    
 }
+
+iframe
+{
+    width:100%;
+    border:none;
+    min-height:inherit;
+}
+
 
 
 #kmer, #mboma
@@ -64,6 +71,7 @@ span
     flex: 1;
     margin: 0 10px 0 10px;
     max-width: 100%;
+    min-height: inherit;
     background: inherit;
     align-content: center;
     border: solid 3px;
@@ -85,17 +93,34 @@ span
     {
         display: flex;
         margin: 0 10px 0 10px;
+        min-height: 600PX;
     }
     
 }
 
 
-@keyframes mon_animation {
-    0%   {border-color:red;}
-    25%  {border-color:yellow;}
-    50%  {border-color:blue;}
-    75%  {border-color:green; }
-    100% {border-color:red;}
+@keyframes mon_animation
+{
+    0%  
+    {
+        border-color:red;
+    }
+    25%  
+    {
+        border-color:yellow;
+    }
+    50%  
+    {
+        border-color:blue;
+    }
+    75% 
+    {
+        border-color:green; 
+    }
+    100% 
+    {
+        border-color:red;
+    }
 }
 
 #box

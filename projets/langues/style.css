@@ -33,7 +33,7 @@ h1
 #cont_iframe
 {
   
-  height: 800px;
+  height: inherit;
   background-color: black;  
   padding: 10px;
  
@@ -43,7 +43,7 @@ h1
 iframe
 {
   
-  
+  width: 100%;
   height: inherit;
   background-color: black;  
   padding: 10px;
@@ -51,6 +51,7 @@ iframe
   border-radius: 50px;
   border-color: red;
   line-height: initial;
+  scrolling:yes;
   animation-name: mon_animation;
   animation-iteration-count: infinite;
   animation-duration: 4s;

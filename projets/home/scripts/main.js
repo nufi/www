@@ -43,20 +43,24 @@
     {
         var projets = [
             {
-                nom: "Langues",
+                nom: "Langues +",
                 dir: "../langues/index.html"
             },    
             {
-                nom: "Pens",
+                nom: "Pens +",
                 dir: "../pens/index.html"
             },
             {
-                nom: "Youtube",
-                dir: "../youtube/index.html"
+                nom: "TutorielJS +",
+                dir: "../tutorielJS/index.html"
             },
             {
-                nom: "TutorielJS",
-                dir: "../tutorielJS/index.html"
+                nom: "ToDo +",
+                dir: "../todo/index.html"
+            },
+            {
+                nom: "Youtube +",
+                dir: "../youtube/index.html"
             },
 
         ];
@@ -75,8 +79,7 @@
             return menu;
         }
    
-    }
- 
+    } 
     
 })();
 

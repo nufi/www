@@ -32,14 +32,15 @@ h1
 
 iframe
 {
+   width: 100%;
    max-height: 75%;
-    
+   border:none;  
+       
 }
 
 #cont_iframe
 {
   
-  width: 75%;
   background-color: black;  
   padding: 10px;
   border: solid 3px;
@@ -59,7 +60,8 @@ iframe
     100% {border-color:red;}
 }
 
-a:link {
+a:link
+{
     color: #00ffff;
 }
 
@@ -77,3 +79,7 @@ a:active {
     color: blue;
 }
 
+#accueil
+{
+    display: block;
+}
