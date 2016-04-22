@@ -5,7 +5,7 @@
     ajouterTodo("Autre chose à faire");
     ajouterTodo("Encore une chose à faire");
     ajouterTodo("Chose à faire");
-   
+    
         
     input.onkeydown = function(e)
     {
@@ -42,6 +42,17 @@
         article.querySelector('img').onkeydown = destruction;
         article.querySelector('.text').onkeydown = retourFocus;
         article.querySelector('input').onchange = complete;
+        
+        article.querySelector('input').onkeydown = function cocherCase(e)
+                                                   {
+                                                      var checkbox = this;
+
+                                                      if (e.keyCode === 13)
+                                                         {
+                                                            checkbox.click();
+                                                         }
+                                                    }
+        
     }
     
     function deleteTodo()
@@ -68,8 +79,13 @@
             input.focus();
         }
         
-    }    
+    } 
     
+    
+    
+    /*
+    fonction creerNouvelleListe pour HTML
+    */
     function creerNouvelleListe()
     {
         var todolist = document.createElement("div");
@@ -87,21 +103,27 @@
     */
     function complete()
     {
-        var checkbox = this;
-  
+        var checkbox = this;        
+        var article = checkbox.parentNode;
+        
         if (checkbox.checked)
         {
-            var article = checkbox.parentNode;
+            
             todolist.removeChild(article);
             donelist.appendChild(article); // au debut en fait!!!
+            article.childNodes[1].style.textDecoration="line-through";             
+
         }
         else 
         {
-            var article = checkbox.parentNode;
+            
             donelist.insertBefore(article, donelist.firstElementChild);
-            todolist.appendChild(article);
+            todolist.appendChild(article);            
         }
+        article.firstElementChild.focus();
     }  
+    
+    
     
     
 })();
