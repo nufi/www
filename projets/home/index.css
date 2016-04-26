@@ -26,7 +26,7 @@ body {
   animation-name: mon_animation;
   animation-iteration-count: infinite;
   animation-duration: 4s;
-    position: relative;
+  position: relative;
 }
 
 #degrade
@@ -50,8 +50,7 @@ h1
 	font-family: 'Pacifico', cursive;	font-size: 1.9em;	 
     text-align: center;
     margin:0px;   
-    padding: 0px;
-   
+    padding: 0px;   
     border:none;
   
 }

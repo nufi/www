@@ -5,6 +5,7 @@ body
 	background: black;
 	color: white;
     margin:20px;
+    
 }
 
 #accueil
@@ -69,7 +70,6 @@ header input
     margin-right: 5px;
 }
 
-
 .text
 {
     font-family: arial, sans-serif;
@@ -78,8 +78,6 @@ header input
     
 }
 
-
-
 article
 {
     padding: 5px 10px;
@@ -87,7 +85,7 @@ article
 
 article img
 {    
- float: right;   
+    float: right;   
 }
 
 article div
@@ -166,6 +164,68 @@ h1
     {
       display: none;
     }
+}
+
+#todolist:empty::after
+{
+    content: "Veuillez entrer une nouvelle tâche svp!";
+    color: lime;
+    font-style: italic;  
+    align-content: center;    
+}
+
+#boutons 
+{
+    background: white;
+    display:flex;       
+    position: fixed;   
+    bottom: 0;
+    left: 0;
+    opacity:0.7;   
+    width: 100%;
+    transition: 1s;
+    
+}
+
+
+button
+{
+    flex: 1;
+    height: 70px;   
+    -webkit-mix-blend-mode:difference;
+    -moz-mix-blend-mode:difference; 
+    mix-blend-mode:difference;
+    color: cyan;    
+    transition: 1s;
+}
+
+button:disabled
+{
+    display: none;
+}
+
+span
+{
+    font-size: 1.4em;
+}
+
+#boutons:hover
+{
+   opacity: 1;  
+   cursor: pointer;
+}
+
+button:hover
+{    
+   cursor: pointer;
+   text-shadow: -5px -5px 15px hsl(220, 100%, 50%);
+   color:hsl(220, 100%, 50%);
+}
+
+img
+{
+    margin-right: 3px;
+    vertical-align: middle;
 }
 
 
