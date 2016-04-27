@@ -4,7 +4,7 @@
     creerNouvelleListe();
     creerBoutons();
     
- init();
+    init();
    // ajouterTodo("Autre chose à faire");
    // ajouterTodo("Encore une chose à faire");
    // ajouterTodo("Chose à faire");   
@@ -16,13 +16,16 @@
         if(e.keyCode === 13)
             {
                 //alert(input.value.trim());
-                ajouterTodo(input.value);                
-                input.value="";                
-                input.focus();
+                if (input.value)
+                {
+                    ajouterTodo(input.value);                
+                    //input.value="";                
+                    //input.focus();
+                        
+                }
             }
         
-    }
-    
+    }    
     
        
     function creerTodo(todotext)
@@ -266,7 +269,7 @@
         var dataTodo = JSON.parse(localStorage.getItem('listeAfaire'));
         var dataDone = JSON.parse(localStorage.getItem('listcomplete'));
         
-        for (var att in dataTodo)//att utilisé comme index dans 
+        for (var att in dataTodo)//att utilisé comme index 
             {
                  ajouterTodo(dataTodo[att]);   
             }
@@ -275,9 +278,14 @@
             {
                  ajouterTodo(dataDone[idx]);  
                  todolist.children[0].children[0].click();
-            }    
+            } 
+        input.value = localStorage.getItem('Saisie');
      }
-   
+    
+    input.onblur = function ()
+    {
+        localStorage.setItem("Saisie", input.value);
+    }
     
 })();
    
