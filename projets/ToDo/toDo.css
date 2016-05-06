@@ -1,282 +1,857 @@
 @import url(https://fonts.googleapis.com/css?family=Pacifico);
-
-body
-{
-	background: black;
-	color: white;
-    margin:20px;    
+:root body {
+  background: black;
+  color: white;
+  margin: 20px;
+  transition: background;
+  transition-duration: 1s;
 }
-
-#accueil
-{ 
+:root body h1 {
+  font-family: 'pacifico', cursive;
+  color: red;
+  transition: color;
+  transition-duration: 1s;
+  margin-left: 15px;
+}
+:root #accueil {
   background: radial-gradient(farthest-corner at 50% 50%, white, black);
-  display: inline-block; 
+  display: inline-block;
   position: fixed;
+  height: 50px;
   top: 0;
-  right:0;  
-  box-shadow:0 0 15px #f0f0f0 inset;
+  right: 0;
+  box-shadow: 0 0 15px white inset;
   border-radius: 0 0 0 30px;
   padding: 20px;
   font-family: arial, sans-serif;
   font-size: 1.3em;
-  font-weight: bold; 
+  font-weight: bold;
   opacity: 100%;
+  transition: background;
+  transition-duration: 1s;
   z-index: 1;
-  
 }
-
-#conteneur
-{   
+:root #accueil p {
+  margin-top: 0;
+  padding: 3px;
+}
+:root #accueil p em {
+  color: lime;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+:root #conteneur {
   display: block;
   margin: 10px;
   padding: 15px;
   border: solid 3px;
-  border-radius: 50px; 
+  border-radius: 50px;
   color: red;
 }
-
-header
-{ 
-  display:flex;
+:root header {
+  display: flex;
   width: 95%;
-  margin:5px;  
-  background: rgba(0,0,0,0.3);
-  padding: 15px;  
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
   border: none;
-  border-radius: 50px; 
+  border-radius: 50px;
   position: relative;
-  
 }
-
-header span
-{
-    font-family: arial, sans-serif;
-    font-style: 1.9em;
-    font-weight:bold;
-    padding: 5px;    
+:root header span {
+  font-family: arial, sans-serif;
+  font-style: 1.9em;
+  font-weight: bold;
+  padding-right: 5px;
+  font-size: 1.4em;
 }
-
-header input
-{
-    flex:1;
-    background: red;
-    border: 0px;
-    border-radius: 10px;    
-    box-shadow:0px 0px 5px 5px red;
-    font-size:14px; 
-    padding: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+:root header input {
+  flex: 1;
+  background: red;
+  border: 0px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px red;
+  font-size: 14px;
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: background;
+  transition-duration: 1s;
 }
-
-.text
-{
-    font-family: arial, sans-serif;
-    font-size: 0.9em;
-    color: white;
-    
+:root .text {
+  font-family: arial, sans-serif;
+  font-size: 1.5em;
+  color: white;
 }
-
-#donelist article .text
-{
-    color: gray;
-    text-decoration: line-through;
+:root #donelist article .text {
+  color: gray;
+  text-decoration: inherit;
 }
-
-article
-{
-    padding: 5px 10px;
+:root article {
+  padding: 5px 10px;
 }
-
-article img
-{    
-    float: right;   
+:root article img {
+  float: right;
+  margin-right: 3px;
+  vertical-align: middle;
 }
-
-article div
-{
-    display:inline-block;
+:root article img:hover {
+  box-shadow: 0 0 50px 10px white;
 }
-
-article div:focus
-{
-    background-color: azure;    
-    border-radius: 3px;
-    color: black;
-    font-size: 0.9em;
+:root article img:focus {
+  box-shadow: 0 0 50px 10px white;
 }
-
-article input:hover
-{
-     box-shadow: 0 0 50px 10px white;
+:root article div {
+  display: inline-block;
 }
-article input:focus
-{
-    box-shadow: 0 0 50px 10px white;
+:root article div:focus {
+  background-color: white;
+  border-radius: 3px;
+  color: black;
+  font-size: 0.9em;
 }
-
-
-article img:hover
-{
-     box-shadow: 0 0 50px 10px white;
+:root article input {
+  margin-right: 10px;
 }
-
-article img:focus
-{
-    box-shadow: 0 0 50px 10px white;
+:root article input:hover {
+  box-shadow: 0 0 50px 10px white;
 }
-
-
-article input
-{
-    margin-right: 10px;
+:root article input:focus {
+  box-shadow: 0 0 50px 10px white;
 }
-
-::-webkit-input-placeholder
-{ /* Chrome/Opera/Safari */
-  color:rgba(0,0,0,0.5);
+:root ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.5);
   font-size: 1.3em;
-  font-weight:bold;
-  
-  
+  font-weight: bold;
 }
-::-moz-placeholder
-{ /* Firefox 19+ */
-  color: rgba(0,0,0,0.5);
+:root ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.5);
   font-size: 1.3em;
-  font-weight:600;
-  
+  font-weight: 600;
 }
-:-ms-input-placeholder 
-{ /* IE 10+ */
+:root :-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(0, 0, 0, 0.5);
+}
+:root :-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 361px) {
+  :root .hide-on-small-screen {
+    opacity: 0;
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+  }
+}
+@media (max-height: 480px) {
+  :root #accueil {
+    top: -90px;
+    right: -90px;
+    transition: 2s;
+  }
+  :root h1 {
+    margin-top: -90px;
+    transition: 2s;
+  }
+}
+:root #todolist:empty::after {
+  content: "Veuillez entrer une nouvelle tâche svp!";
+  display: block;
+  color: lime;
+  font-style: italic;
+  text-align: center;
+}
+:root #boutons {
+  background: white;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  width: 100%;
+  transition: 1s;
+}
+:root #boutons:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+:root button {
+  flex: 1;
+  height: 70px;
+  -webkit-mix-blend-mode: difference;
+  -moz-mix-blend-mode: difference;
+  mix-blend-mode: difference;
+  color: cyan;
+  transition: 1s;
+}
+:root button span {
+  font-size: 1.4em;
+}
+:root button:disabled {
+  display: none;
+}
+:root button:hover {
+  cursor: pointer;
+  text-shadow: -5px -5px 15px #0055ff;
+  color: #0055ff;
+}
+:root a:link {
   color: cyan;
 }
-:-moz-placeholder 
-{ /* Firefox 18- */
+:root a:visited {
+  color: green;
+}
+:root a:hover {
+  color: hotpink;
+}
+:root a:active {
+  color: blue;
+}
+:root.blue-on-orange body {
+  background: #FFaa00;
+  color: black;
+  margin: 20px;
+  transition: background;
+  transition-duration: 1s;
+}
+:root.blue-on-orange body h1 {
+  font-family: 'pacifico', cursive;
+  color: blue;
+  transition: color;
+  transition-duration: 1s;
+  margin-left: 15px;
+}
+:root.blue-on-orange #accueil {
+  background: radial-gradient(farthest-corner at 50% 50%, black, #FFaa00);
+  display: inline-block;
+  position: fixed;
+  height: 50px;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 15px black inset;
+  border-radius: 0 0 0 30px;
+  padding: 20px;
+  font-family: arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  opacity: 100%;
+  transition: background;
+  transition-duration: 1s;
+  z-index: 1;
+}
+:root.blue-on-orange #accueil p {
+  margin-top: 0;
+  padding: 3px;
+}
+:root.blue-on-orange #accueil p em {
+  color: red;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+:root.blue-on-orange #conteneur {
+  display: block;
+  margin: 10px;
+  padding: 15px;
+  border: solid 3px;
+  border-radius: 50px;
+  color: blue;
+}
+:root.blue-on-orange header {
+  display: flex;
+  width: 95%;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  position: relative;
+}
+:root.blue-on-orange header span {
+  font-family: arial, sans-serif;
+  font-style: 1.9em;
+  font-weight: bold;
+  padding-right: 5px;
+  font-size: 1.4em;
+}
+:root.blue-on-orange header input {
+  flex: 1;
+  background: blue;
+  border: 0px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px blue;
+  font-size: 14px;
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: background;
+  transition-duration: 1s;
+}
+:root.blue-on-orange .text {
+  font-family: arial, sans-serif;
+  font-size: 1.5em;
+  color: black;
+}
+:root.blue-on-orange #donelist article .text {
+  color: gray;
+  text-decoration: inherit;
+}
+:root.blue-on-orange article {
+  padding: 5px 10px;
+}
+:root.blue-on-orange article img {
+  float: right;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+:root.blue-on-orange article img:hover {
+  box-shadow: 0 0 50px 10px black;
+}
+:root.blue-on-orange article img:focus {
+  box-shadow: 0 0 50px 10px black;
+}
+:root.blue-on-orange article div {
+  display: inline-block;
+}
+:root.blue-on-orange article div:focus {
+  background-color: black;
+  border-radius: 3px;
+  color: #FFaa00;
+  font-size: 0.9em;
+}
+:root.blue-on-orange article input {
+  margin-right: 10px;
+}
+:root.blue-on-orange article input:hover {
+  box-shadow: 0 0 50px 10px black;
+}
+:root.blue-on-orange article input:focus {
+  box-shadow: 0 0 50px 10px black;
+}
+:root.blue-on-orange ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3em;
+  font-weight: bold;
+}
+:root.blue-on-orange ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3em;
+  font-weight: 600;
+}
+:root.blue-on-orange :-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(0, 0, 0, 0.5);
+}
+:root.blue-on-orange :-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 361px) {
+  :root.blue-on-orange .hide-on-small-screen {
+    opacity: 0;
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+  }
+}
+@media (max-height: 480px) {
+  :root.blue-on-orange #accueil {
+    top: -90px;
+    right: -90px;
+    transition: 2s;
+  }
+  :root.blue-on-orange h1 {
+    margin-top: -90px;
+    transition: 2s;
+  }
+}
+:root.blue-on-orange #todolist:empty::after {
+  content: "Veuillez entrer une nouvelle tâche svp!";
+  display: block;
+  color: red;
+  font-style: italic;
+  text-align: center;
+}
+:root.blue-on-orange #boutons {
+  background: black;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  width: 100%;
+  transition: 1s;
+}
+:root.blue-on-orange #boutons:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+:root.blue-on-orange button {
+  flex: 1;
+  height: 70px;
+  -webkit-mix-blend-mode: difference;
+  -moz-mix-blend-mode: difference;
+  mix-blend-mode: difference;
+  color: cyan;
+  transition: 1s;
+}
+:root.blue-on-orange button span {
+  font-size: 1.4em;
+}
+:root.blue-on-orange button:disabled {
+  display: none;
+}
+:root.blue-on-orange button:hover {
+  cursor: pointer;
+  text-shadow: -5px -5px 15px #0055ff;
+  color: #0055ff;
+}
+:root.blue-on-orange a:link {
   color: cyan;
 }
-
-h1
-{
-   font-family: 'pacifico', cursive;
-    color: red;
-    margin-left: 15px;
+:root.blue-on-orange a:visited {
+  color: green;
 }
-
-/*@media(max-width:361px)
-{
-    .hide-on-small-screen
-    {
-      display: none;
-    }
-}*/
-
-@media(max-width:361px)
-{
-    .hide-on-small-screen
-    {
-        opacity: 0;
-        -webkit-transition: opacity 2s ease-in;
-        -moz-transition: opacity 2s ease-in;
-        -o-transition: opacity 2s ease-in;
-        -ms-transition: opacity 2s ease-in;
-        transition: opacity 2s ease-in;
-    }
+:root.blue-on-orange a:hover {
+  color: hotpink;
 }
-
-@media(max-height:480px)
-{
-    #accueil
-    {
-      top: -65px;
-      right: -65px;        
-      transition: 2s;
-    }
-      h1
-    {
-        margin-top: -90px;
-        transition: 2s;
-    }
+:root.blue-on-orange a:active {
+  color: blue;
 }
-
-#todolist:empty::after
-{
-    content: "Veuillez entrer une nouvelle tâche svp!";
-    color: lime;
-    font-style: italic;  
-    align-content: center;    
+:root.lime-on-red body {
+  background: black;
+  color: #FFaa00;
+  margin: 20px;
+  transition: background;
+  transition-duration: 1s;
 }
-
-#boutons 
-{
-    background: white;
-    display:flex;       
-    position: fixed;   
-    bottom: 0;
-    left: 0;
-    opacity:0.7;   
-    width: 100%;
-    transition: 1s;
-    
+:root.lime-on-red body h1 {
+  font-family: 'pacifico', cursive;
+  color: lime;
+  transition: color;
+  transition-duration: 1s;
+  margin-left: 15px;
 }
-
-
-button
-{
-    flex: 1;
-    height: 70px;   
-    -webkit-mix-blend-mode:difference;
-    -moz-mix-blend-mode:difference; 
-    mix-blend-mode:difference;
-    color: cyan;    
-    transition: 1s;
+:root.lime-on-red #accueil {
+  background: radial-gradient(farthest-corner at 50% 50%, #FFaa00, black);
+  display: inline-block;
+  position: fixed;
+  height: 50px;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 15px #FFaa00 inset;
+  border-radius: 0 0 0 30px;
+  padding: 20px;
+  font-family: arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  opacity: 100%;
+  transition: background;
+  transition-duration: 1s;
+  z-index: 1;
 }
-
-button:disabled
-{
-    display: none;
+:root.lime-on-red #accueil p {
+  margin-top: 0;
+  padding: 3px;
 }
-
-span
-{
-    font-size: 1.4em;
+:root.lime-on-red #accueil p em {
+  color: red;
+  padding-right: 5px;
+  vertical-align: middle;
 }
-
-#boutons:hover
-{
-   opacity: 1;  
-   cursor: pointer;
+:root.lime-on-red #conteneur {
+  display: block;
+  margin: 10px;
+  padding: 15px;
+  border: solid 3px;
+  border-radius: 50px;
+  color: lime;
 }
-
-button:hover
-{    
-   cursor: pointer;
-   text-shadow: -5px -5px 15px hsl(220, 100%, 50%);
-   color:hsl(220, 100%, 50%);
+:root.lime-on-red header {
+  display: flex;
+  width: 95%;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  position: relative;
 }
-
-img
-{
-    margin-right: 3px;
-    vertical-align: middle;
+:root.lime-on-red header span {
+  font-family: arial, sans-serif;
+  font-style: 1.9em;
+  font-weight: bold;
+  padding-right: 5px;
+  font-size: 1.4em;
 }
-
-
-a:link 
-{
-    color: #00ffff;
+:root.lime-on-red header input {
+  flex: 1;
+  background: lime;
+  border: 0px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px lime;
+  font-size: 14px;
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: background;
+  transition-duration: 1s;
 }
-
-a:visited
-{
-    color: green;
+:root.lime-on-red .text {
+  font-family: arial, sans-serif;
+  font-size: 1.5em;
+  color: #FFaa00;
 }
-
-a:hover
-{
-    color: hotpink;
+:root.lime-on-red #donelist article .text {
+  color: gray;
+  text-decoration: inherit;
 }
-
-a:active {
-    color: blue;
+:root.lime-on-red article {
+  padding: 5px 10px;
+}
+:root.lime-on-red article img {
+  float: right;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+:root.lime-on-red article img:hover {
+  box-shadow: 0 0 50px 10px #FFaa00;
+}
+:root.lime-on-red article img:focus {
+  box-shadow: 0 0 50px 10px #FFaa00;
+}
+:root.lime-on-red article div {
+  display: inline-block;
+}
+:root.lime-on-red article div:focus {
+  background-color: #FFaa00;
+  border-radius: 3px;
+  color: black;
+  font-size: 0.9em;
+}
+:root.lime-on-red article input {
+  margin-right: 10px;
+}
+:root.lime-on-red article input:hover {
+  box-shadow: 0 0 50px 10px #FFaa00;
+}
+:root.lime-on-red article input:focus {
+  box-shadow: 0 0 50px 10px #FFaa00;
+}
+:root.lime-on-red ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3em;
+  font-weight: bold;
+}
+:root.lime-on-red ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3em;
+  font-weight: 600;
+}
+:root.lime-on-red :-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(0, 0, 0, 0.5);
+}
+:root.lime-on-red :-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 361px) {
+  :root.lime-on-red .hide-on-small-screen {
+    opacity: 0;
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+  }
+}
+@media (max-height: 480px) {
+  :root.lime-on-red #accueil {
+    top: -90px;
+    right: -90px;
+    transition: 2s;
+  }
+  :root.lime-on-red h1 {
+    margin-top: -90px;
+    transition: 2s;
+  }
+}
+:root.lime-on-red #todolist:empty::after {
+  content: "Veuillez entrer une nouvelle tâche svp!";
+  display: block;
+  color: red;
+  font-style: italic;
+  text-align: center;
+}
+:root.lime-on-red #boutons {
+  background: #FFaa00;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  width: 100%;
+  transition: 1s;
+}
+:root.lime-on-red #boutons:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+:root.lime-on-red button {
+  flex: 1;
+  height: 70px;
+  -webkit-mix-blend-mode: difference;
+  -moz-mix-blend-mode: difference;
+  mix-blend-mode: difference;
+  color: cyan;
+  transition: 1s;
+}
+:root.lime-on-red button span {
+  font-size: 1.4em;
+}
+:root.lime-on-red button:disabled {
+  display: none;
+}
+:root.lime-on-red button:hover {
+  cursor: pointer;
+  text-shadow: -5px -5px 15px #0055ff;
+  color: #0055ff;
+}
+:root.lime-on-red a:link {
+  color: cyan;
+}
+:root.lime-on-red a:visited {
+  color: green;
+}
+:root.lime-on-red a:hover {
+  color: hotpink;
+}
+:root.lime-on-red a:active {
+  color: blue;
+}
+:root.blue-on-sky body {
+  background: black;
+  color: red;
+  margin: 20px;
+  transition: background;
+  transition-duration: 1s;
+}
+:root.blue-on-sky body h1 {
+  font-family: 'pacifico', cursive;
+  color: blue;
+  transition: color;
+  transition-duration: 1s;
+  margin-left: 15px;
+}
+:root.blue-on-sky #accueil {
+  background: radial-gradient(farthest-corner at 50% 50%, red, black);
+  display: inline-block;
+  position: fixed;
+  height: 50px;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 15px red inset;
+  border-radius: 0 0 0 30px;
+  padding: 20px;
+  font-family: arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  opacity: 100%;
+  transition: background;
+  transition-duration: 1s;
+  z-index: 1;
+}
+:root.blue-on-sky #accueil p {
+  margin-top: 0;
+  padding: 3px;
+}
+:root.blue-on-sky #accueil p em {
+  color: orange;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+:root.blue-on-sky #conteneur {
+  display: block;
+  margin: 10px;
+  padding: 15px;
+  border: solid 3px;
+  border-radius: 50px;
+  color: blue;
+}
+:root.blue-on-sky header {
+  display: flex;
+  width: 95%;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  position: relative;
+}
+:root.blue-on-sky header span {
+  font-family: arial, sans-serif;
+  font-style: 1.9em;
+  font-weight: bold;
+  padding-right: 5px;
+  font-size: 1.4em;
+}
+:root.blue-on-sky header input {
+  flex: 1;
+  background: blue;
+  border: 0px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 5px blue;
+  font-size: 14px;
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: background;
+  transition-duration: 1s;
+}
+:root.blue-on-sky .text {
+  font-family: arial, sans-serif;
+  font-size: 1.5em;
+  color: red;
+}
+:root.blue-on-sky #donelist article .text {
+  color: gray;
+  text-decoration: inherit;
+}
+:root.blue-on-sky article {
+  padding: 5px 10px;
+}
+:root.blue-on-sky article img {
+  float: right;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+:root.blue-on-sky article img:hover {
+  box-shadow: 0 0 50px 10px red;
+}
+:root.blue-on-sky article img:focus {
+  box-shadow: 0 0 50px 10px red;
+}
+:root.blue-on-sky article div {
+  display: inline-block;
+}
+:root.blue-on-sky article div:focus {
+  background-color: red;
+  border-radius: 3px;
+  color: black;
+  font-size: 0.9em;
+}
+:root.blue-on-sky article input {
+  margin-right: 10px;
+}
+:root.blue-on-sky article input:hover {
+  box-shadow: 0 0 50px 10px red;
+}
+:root.blue-on-sky article input:focus {
+  box-shadow: 0 0 50px 10px red;
+}
+:root.blue-on-sky ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3em;
+  font-weight: bold;
+}
+:root.blue-on-sky ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3em;
+  font-weight: 600;
+}
+:root.blue-on-sky :-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(0, 0, 0, 0.5);
+}
+:root.blue-on-sky :-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 361px) {
+  :root.blue-on-sky .hide-on-small-screen {
+    opacity: 0;
+    -webkit-transition: opacity 2s ease-in;
+    -moz-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    -ms-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+  }
+}
+@media (max-height: 480px) {
+  :root.blue-on-sky #accueil {
+    top: -90px;
+    right: -90px;
+    transition: 2s;
+  }
+  :root.blue-on-sky h1 {
+    margin-top: -90px;
+    transition: 2s;
+  }
+}
+:root.blue-on-sky #todolist:empty::after {
+  content: "Veuillez entrer une nouvelle tâche svp!";
+  display: block;
+  color: orange;
+  font-style: italic;
+  text-align: center;
+}
+:root.blue-on-sky #boutons {
+  background: red;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7;
+  width: 100%;
+  transition: 1s;
+}
+:root.blue-on-sky #boutons:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+:root.blue-on-sky button {
+  flex: 1;
+  height: 70px;
+  -webkit-mix-blend-mode: difference;
+  -moz-mix-blend-mode: difference;
+  mix-blend-mode: difference;
+  color: cyan;
+  transition: 1s;
+}
+:root.blue-on-sky button span {
+  font-size: 1.4em;
+}
+:root.blue-on-sky button:disabled {
+  display: none;
+}
+:root.blue-on-sky button:hover {
+  cursor: pointer;
+  text-shadow: -5px -5px 15px #0055ff;
+  color: #0055ff;
+}
+:root.blue-on-sky a:link {
+  color: cyan;
+}
+:root.blue-on-sky a:visited {
+  color: green;
+}
+:root.blue-on-sky a:hover {
+  color: hotpink;
+}
+:root.blue-on-sky a:active {
+  color: blue;
 }

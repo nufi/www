@@ -38,7 +38,7 @@
         }
     }
 
-    
+    /*
     function initialiserMenu ()
     {
         var projets = [
@@ -79,7 +79,30 @@
             return menu;
         }
    
-    } 
+    } */
+    
+    function initialiserMenu()
+    {
+         var TemplateScript = document.querySelector("#mon_gabarit").innerHTML;
+         var Template = Handlebars.compile(TemplateScript);
+        
+        var context = 
+            {
+                project: [ 
+                    { nom: "Langues", dir:"langues", description: "Pratique de l'utilisation des sélecteurs et de la mise en page avec CSS3", sujets:["CSS3", "HTML5", "Sélecteurs"] },    
+                    { nom: "Pens", dir: "Pens", description: "Exercices que j'ai faits sur CodePen." },                   
+                    { nom: "ToDo", dir: "todo", description: "technique de programmation avancée JS." },                    
+                    { nom: "ToDo", dir: "todo", skin: "(classique)", loc: "?skin=red-on-black", description: "skin par défaut"},         
+                    { nom: "ToDo", dir: "todo", skin: "(orange)", loc: "?skin=blue-on-orange", description: "skin blue on orange"},      
+                    { nom: "ToDo", dir: "todo", skin: "(skyBlue)", loc: "?skin=blue-on-sky", description: "skin on blue"},                    
+                    { nom: "TutorielJS", dir: "tutorielJS"},
+                    { nom: "Youtube", dir: "youtube"},
+                ]
+            };
+        var compileHtml = Template(context);
+        document.querySelector("#ulMenu").innerHTML = compileHtml;    
+        
+    };
     
 })();
 

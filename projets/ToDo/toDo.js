@@ -5,48 +5,30 @@
     creerBoutons();
     
     init();
-   // ajouterTodo("Autre chose à faire");
-   // ajouterTodo("Encore une chose à faire");
-   // ajouterTodo("Chose à faire");   
-    
-  //dataUpdated();
-    
+      
     input.onkeydown = function(e)
     {
         if(e.keyCode === 13)
             {
                 //alert(input.value.trim());
-                if (input.value)
-                {
-                    ajouterTodo(input.value);                
-                    //input.value="";                
-                    //input.focus();
-                        
-                }
-            }
-        
+                //if (input.value)                
+                ajouterTodo(input.value);                
+                    input.value="";                
+                    input.focus();
+            } 
     }    
-    
-       
-    function creerTodo(todotext)
-    {
-        var art = 
-            '<article>\
-                <input type="checkbox">\
-                <div class="text" tabindex="0" contenteditable>' + todotext + '</div>\
-                <img src="delete64.png" alt="delete" tabindex="0">\
-            </article>';
-        return art;
-    }  
-    
-    
+   
+    /*
+    Utilisation de template HTML5 ex-situ
+    */
     function ajouterTodo(todotext)
     {
-        var article = document.createElement("article");
-        //todolist.appendChild(article);
-        todolist.insertBefore(article, todolist.childNodes[0]);
-        article.outerHTML = creerTodo(todotext);
-        // outerHTML invalide la reference vers le DOM donc il faut aller la rechercher
+        var template = document.querySelector('template').content.firstElementChild;
+        var clone = template.cloneNode(true);
+        clone.querySelector('.text').textContent = todotext;
+        
+        todolist.insertBefore(clone, todolist.childNodes[0]);
+       
         article = todolist.firstElementChild;
         article.querySelector('img').onclick = deleteTodo;//deleteTodo juste invoqué, sera appelé plus tard deleteTodo();
         article.querySelector('img').onkeydown = detruire;
@@ -63,12 +45,12 @@
         //console.log("Delete TODO"); 
         this.parentNode.outerHTML = "";
         gererBoutons();
-        dataUpdated();
-        
+        dataUpdated();        
     }
     
     /*
-    Lorsque le focus est sur l’image, et qu’on appuie sur [entrée], l’article est détruit. */
+    Lorsque le focus est sur l’image, et qu’on appuie sur [entrée], l’article est détruit.
+    */
     
     function detruire(e)
     {
@@ -84,8 +66,7 @@
     {
          if (e.keyCode === 13)
             {
-                input.focus();              
-                
+                input.focus();
             }        
     }    
     
@@ -118,8 +99,7 @@
         if (checkbox.checked)
         {            
             todolist.removeChild(article);
-            donelist.appendChild(article); // au debut en fait!!!           
-            //checkbox.nextSibling.style.textDecoration = "line-through";
+            donelist.appendChild(article); // au debut en fait!!!                       
         }
         else 
         {            
@@ -133,8 +113,7 @@
     }
     
     function creerBoutons()
-    {
-       
+    {       
        var div = document.createElement("div");
        div.id = "boutons";       
         
@@ -148,8 +127,7 @@
        spanChkBtn.textContent = "Marquer toutes les tâches  comme complétées";
        chkBtn.appendChild(imgChkBtn);
        chkBtn.appendChild(spanChkBtn);
-       div.appendChild(chkBtn);
-        
+       div.appendChild(chkBtn);        
         
        var delBtn = document.createElement("button");
        delBtn.id = "btnDel";
@@ -182,8 +160,7 @@
     {
         
         if (todolist.childNodes.length === 0)
-            {
-                                                
+            {                                                
                 btnChk.disabled = true;
             }
         else
@@ -205,8 +182,7 @@
                 btnDel.disabled = false;
             }  
            
-            localStorage.setItem('btnDelete',  btnDel.disabled);
-        
+            localStorage.setItem('btnDelete',  btnDel.disabled);        
     }
     
     btnDel.onclick = () =>
@@ -246,8 +222,7 @@
     }
     
     function dataUpdated()
-    {
-        
+    {        
        var listTodo = [];
        for (let i = 0; i < todolist.childNodes.length; i++)
            {
@@ -260,12 +235,11 @@
            {
                listDone.push(donelist.children[i].textContent);  
            }
-        localStorage.setItem('listcomplete', JSON.stringify(listDone));        
-     
+        localStorage.setItem('listcomplete', JSON.stringify(listDone));    
     }
     
     function init()
-    {
+    {        
         var dataTodo = JSON.parse(localStorage.getItem('listeAfaire'));
         var dataDone = JSON.parse(localStorage.getItem('listcomplete'));
         
@@ -280,12 +254,59 @@
                  todolist.children[0].children[0].click();
             } 
         input.value = localStorage.getItem('Saisie');
+        onloadSkin();
      }
-    
+    /*
+    Si tabulation sur champ de saisie, sauvegarder le contenu.
+    */
     input.onblur = function ()
     {
         localStorage.setItem("Saisie", input.value);
+    } 
+     
+    selectSkin.onchange = changeSkin;
+    
+    function changeSkin()    
+    {        
+        document.documentElement.setAttribute("class", selectSkin.value);
+        localStorage.setItem('background', selectSkin.value);
     }
     
+    function onloadSkin()
+    {
+        // 1. DETERMINER LE SKIN A APPLIQUER
+        // Recuperer l'ancien skin dans localStorage
+        var lastSkin = localStorage.getItem('background');        
+        
+        // Recuperer le skin spécifié dans la query string
+        var queryobject = parseQueryString(location.search);
+        var querySkin = queryobject.skin;
+        
+        // skin a appliqeur
+        var skin = querySkin || lastSkin  || ""; // si querySkin sinon lastSkin sinon skin par défaut.
+        
+        // 2. APPLIQUER LE SKIN
+        document.documentElement.className = skin;  //application directe de la class 
+        selectSkin.value = skin;                
+    }  
+    
+    
+    function parseQueryString(qstr)
+    {
+        var query = {};
+        var parameters = qstr.substr(1).split('&');
+        for (var i = 0; i < parameters.length; i++)
+            {
+                var keyAndValue = parameters[i].split('=');
+                var key = decodeURIComponent(keyAndValue[0]);
+                var value = decodeURIComponent(keyAndValue[1] || '');
+                query[key] = value;
+            }
+        return query;
+    }
+    
+        
+    
+         
 })();
    

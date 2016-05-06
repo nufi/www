@@ -76,6 +76,51 @@ li
 	font-family: arial;
 	font-size: 1.5em;
 	color: yellow;
+    position: relative;
+}
+
+li div
+{
+    background: black;
+    border: solid red 2px;
+    border-radius: 10%;
+    font-size: 70%;
+    min-width: 100px;
+    opacity: 0;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    transform: scale(0.4);
+    width:30%;
+    z-index: 2;    
+}
+
+li:hover div
+{
+    opacity: 1;
+    transition: 1s;
+    transform: scale(1);
+}
+
+
+li div span:nth-child(2)
+{
+    color:red;
+}
+
+li div span:nth-child(3)
+{
+    color:blue;
+}
+
+li div span:nth-child(4)
+{
+    color:lime;
+}
+li div span:nth-child(5)
+{
+    color:blue;
 }
 
 p
@@ -195,6 +240,21 @@ label:hover
     margin-right: 5px;
     position:relative;
     top: 2px;
+}
+
+li:nth-child(4) #sp
+{
+    color:red;
+}
+
+li:nth-child(5) #sp
+{
+    color:orange;
+}
+
+li:nth-child(6) #sp
+{
+    color:blue;
 }
 
 

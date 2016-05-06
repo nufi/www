@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../common/css/normalize.min.css">
     <link rel="stylesheet" href="index.css">
     <script src="../../common/JS/favicons.js"></script>
+     
 </head>
 
 <body>
@@ -16,16 +17,41 @@
         <label id="lblcheckbox"><input type="checkbox" id="checkbox">Sourdine</label>
       
         <div id="degrade"> <h1>Flaubert W. Moumi</h1> </div>      
-        <p id="m_view"><img src="photo.jpg" alt="Acropole des draveurs"></p>
+        <p id="m_view"><img src="./Pics/IMG_1004.JPG" alt="photo auteur"></p>
         <h2 id="id1"><span>Bienvenue sur mon site web!</span></h2>
         <audio id="audio" src="Voix.3gp"  autoplay>
         </audio>
         <p>Je vous invite à le visiter. Les rubriques disponibles, en ordre alphabétique sont les suivantes:</p>
-             
+        
         <ul id="ulMenu"></ul>
-
     </div>
-    <script src="scripts/main.js"></script>
+    
+    
+    <script id="mon_gabarit" type="text/x-handlebars-template">       
+        {{#each project}}            
+            <li><a href="../{{dir}}/index.html{{loc}}">{{nom}}
+                {{#if skin}}
+                <span id="sp">{{skin}}</span>
+                {{/if}}</a>           
+                    {{#if description}}
+                        <div>{{description}}
+                            {{#if sujets}}
+                                <br><span>Sujets:</span>
+                                    {{#each sujets}}
+                                        <span>{{this}}</span>
+                                    {{/each}}
+                            {{/if}}
+                        </div>
+                    {{/if}}                
+                </li>
+        {{/each}}
+    </script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="scripts/main.js"></script> 
+   
+   
 </body>
 
 </html>

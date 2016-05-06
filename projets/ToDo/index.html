@@ -1,19 +1,31 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" >
 
 <head>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>TP2 - D </title> 
-     <link rel="stylesheet" href="toDo.css"/>
-    <script src="../../common/JS/favicons.js"></script>
+    <title>TP5 </title>    
+    <link rel="stylesheet" href="styles.fixed.css"/>
+    
+   <!-- <link rel="stylesheet/less" type="text/css" href="toDo.less"/>   
+    <script src="less.js" type="text/javascript"></script>-->
+    
+    <script src="../../common/JS/favicons.js"></script>  
     
 </head>
 
 <body>   
     
     <div id="accueil">
-        <a href="../home/index.html">Retour à l'accueil</a>    
+        <a href="../home/index.html">Retour à l'accueil</a>
+        <p><em>Skin:</em>
+            <select id="selectSkin">
+                <option value="" selected>Red on Black</option>
+                <option value="blue-on-orange">Blue on Orange</option>
+                <option value="blue-on-sky">Sky on Blue</option>
+                <option value="lime-on-red">Lime on Red</option>
+            </select>
+        </p>
     </div>
     
      <h1>todo</h1>
@@ -23,21 +35,19 @@
                     <input type="text"
                            id="input"
                            placeholder="Entrez ici..."
-                           autofocus>      
-
+                           autofocus>
             </header>
-        <!--<p id="invite" class="pinvite"></p>-->
-        <!--<div id="alltasks">  
-                <div id="todolist"></div>
-                <div id="donelist"></div>
-            </div>-->
-    </main>
-    
-    <!--<div id="boutons">
-        <button id="btnChk"><img src="check64.png" alt="img marquer"><span>Marquer</span></button>
-        <button id="btnDel"><img src="delete64.png" alt="img delete"><span>supprimer</span></button>   
-    </div>-->
-    
+        
+        <template>            
+               <article>                    
+                <input type="checkbox" id="checkbox">
+                    <div class="text" tabindex="0" contenteditable>todotext</div>
+                    <img src="delete64.png" alt="delete" tabindex="0">
+               </article>
+            </template> 
+        
+    </main>    
+        
     <script src="toDo.js"></script>
 </body>
 
