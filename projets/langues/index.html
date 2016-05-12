@@ -6,19 +6,24 @@
     <title>Nufi</title>
     <link rel="stylesheet" href="style.css">
     <script src="../../common/JS/favicons.js"></script>
+    <script  src="https://code.jquery.com/jquery-1.12.3.js" integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc=" crossorigin="anonymous"></script>
 </head>
 
 <body>   
     
-    <div id="accueil"><a href="../home/index.html">Retour à l'accueil</a>    
+    <div id="accueil"><a href="../home/index.html">Retour à l'accueil</a><br/>
+        <p id="boutons"><button id="btn"> Basculer iframe</button>
+        <button id="btn2"> Basculer paragraphes</button>
+        <button id="btn3"> Basculer boutons</button></p>
     </div>
-     <h1>Les Langues</h1>
-    
+    <h1>Les Langues</h1>    
     <div id="cont_iframe">
-    <iframe src="langues.html" 
-    onload="this.style.height=this.contentDocument.body.scrollHeight + 200 +'px';">
-    <p>Impossible de charger <a href="langues.html">cette page web</a>et de la mettre dans un iframe.</p></iframe>
+        <iframe id="iframe" src="langues.html">    
+            <p>Impossible de charger <a href="langues.html">cette page web</a>et de la mettre dans un iframe.</p>
+        </iframe>
     </div>
+    
+    <script src="index.js"></script>    
 </body>
 
 </html>

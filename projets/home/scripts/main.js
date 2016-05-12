@@ -83,10 +83,12 @@
     
     function initialiserMenu()
     {
-         var TemplateScript = document.querySelector("#mon_gabarit").innerHTML;
-         var Template = Handlebars.compile(TemplateScript);
+         /*var TemplateScript = document.querySelector("#mon_gabarit").innerHTML;
+         var Template = Handlebars.compile(TemplateScript);*/
         
-        var context = 
+         
+        
+        /*var context = 
             {
                 project: [ 
                     { nom: "Langues", dir:"langues", description: "Pratique de l'utilisation des sélecteurs et de la mise en page avec CSS3", sujets:["CSS3", "HTML5", "Sélecteurs"] },    
@@ -98,10 +100,24 @@
                     { nom: "TutorielJS", dir: "tutorielJS"},
                     { nom: "Youtube", dir: "youtube"},
                 ]
-            };
-        var compileHtml = Template(context);
-        document.querySelector("#ulMenu").innerHTML = compileHtml;    
+            };*/
+        /*var compileHtml = Template(context);
+        document.querySelector("#ulMenu").innerHTML = compileHtml;*/
         
+        
+        jQuery.getJSON("projets.json")
+            .done(function(jsonData){
+                var context = {project:jsonData}
+                var TemplateScript = $("#mon_gabarit").html();
+                var Template = Handlebars.compile(TemplateScript);
+                var compileHtml = Template(context)
+                $("#ulMenu").html(compileHtml);
+
+            })
+            .fail(function()
+            {
+                console.log("Impossible de charger le JSON");
+            });
     };
     
 })();

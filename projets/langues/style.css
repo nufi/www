@@ -20,8 +20,21 @@ body
   font-weight: bold; 
   opacity: 100%;
   z-index: 1;
-  
 }
+
+#accueil > p  
+{ 
+  margin: 0;   
+  text-align: center;   
+}
+
+#boutons
+{   
+   font-weight: bold;
+   display: flex;
+   flex-flow: column;
+}
+
 
 h1
 {
@@ -36,8 +49,6 @@ h1
   height: inherit;
   background-color: black;  
   padding: 10px;
- 
-    
 }
 
 iframe
