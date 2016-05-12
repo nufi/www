@@ -27,7 +27,7 @@ $btnAffichage.click
                     {
                         /*$(this).parent().children('p').fadeToggle(2000);
                         $(this).parent().children('ol').fadeToggle(2000);*/
-                        $(this).parent().find('p ol').fadeToggle(2000);
+                        $(this).parent().find('p, ol').fadeToggle(2000);
                     }
             
            );
